@@ -10,12 +10,36 @@
 	<h1>Atividade 1 - Eldorado Tech Training</h1>
 	<hr>
 	<a href="https://www.google.com.br">Link para google</a>
-
+	<form action="">
+		<label for="fname">Nome:</label>
+		<input type="text" id="fname">
+		<label for="fpassword">Senha:</label>
+		<input type="password" id="fpassword">
+		<br>
+		<input type="submit" value="Submit" onclick="login(document.getElementById('fname').value,document.getElementById('fpassword').value)">
+	</form>
 </body>
 <style>
 	body {
 		margin: 0;
 		padding: 0;
 	}
+	
+	a {
+		margin-left: 15px;
+	}
+
+	form {
+		margin: 30px 0 0 15px;
+		width: 300px;
+		display: flex;
+		flex-direction: column;
+	}
 </style>
+<script>
+	function login(name, pass) {
+		console.log('name:', name);
+		console.log('senha:', pass);
+	}
+</script>
 </html>
